@@ -2,8 +2,7 @@
 
 A 2D tower defence game built in **Godot 4.2** with **GDScript**. Orcs march along a path towards your base. Place archer and wizard towers to stop them before your base runs out of health.
 
-![Gameplay screenshot](docs/screenshot.png)
-<!-- Add a gameplay screenshot or GIF at docs/screenshot.png -->
+![Gameplay screenshot](Gameplay2.PNG)
 
 ## Play it
 
