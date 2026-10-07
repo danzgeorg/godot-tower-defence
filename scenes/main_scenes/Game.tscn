@@ -1,0 +1,180 @@
+[gd_scene load_steps=14 format=3 uid="uid://m4aquflxqtyp"]
+
+[ext_resource type="PackedScene" uid="uid://b1fqshrfxsard" path="res://scenes/main_scenes/level1.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://cjg8mw2g3n7uy" path="res://assets/UI/TowerShop.png" id="2"]
+[ext_resource type="FontFile" path="res://assets/fonts/towershop.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://wessgrwwfiid" path="res://assets/UI/BuildOptions.PNG" id="4"]
+[ext_resource type="Script" path="res://scenes/main_scenes/UI.gd" id="5"]
+[ext_resource type="Script" path="res://scenes/main_scenes/Game.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://eaa7xrff5dfj" path="res://assets/UI/Buttons/Fast Forward.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://rxyiarhlp46e" path="res://assets/UI/coin_icon.png" id="8"]
+[ext_resource type="FontFile" uid="uid://djm3x2450gmys" path="res://assets/fonts/gameplay_text.tres" id="9"]
+[ext_resource type="Texture2D" uid="uid://cupj7kbcysue8" path="res://assets/UI/health_icon.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://8r3dn3uac3mj" path="res://assets/UI/pause.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dkxbcyvpkhib8" path="res://assets/UI/pause_pressed.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bidmhjm75jveg" path="res://assets/UI/Buttons/Fast Forward_pressed.png" id="13"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("6")
+
+[node name="Level1" parent="." instance=ExtResource("1")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("5")
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TowerShop" type="TextureButton" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 1178.0
+offset_top = 684.0
+offset_right = 1970.0
+offset_bottom = 1152.0
+texture_normal = ExtResource("2")
+
+[node name="Label" type="Label" parent="UI/HUD/TowerShop"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 77.0
+offset_right = 679.0
+offset_bottom = 160.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.501961)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 60
+text = "Tower Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BuildOptions" type="VBoxContainer" parent="UI/HUD/TowerShop"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 179.0
+offset_right = 741.0
+offset_bottom = 375.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/TowerShop/BuildOptions"]
+layout_mode = 2
+texture = ExtResource("4")
+
+[node name="Archer" type="TextureButton" parent="UI/HUD/TowerShop/BuildOptions/TextureRect" groups=["build_options"]]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 24.0
+offset_right = 150.0
+offset_bottom = 125.0
+
+[node name="Sword" type="TextureButton" parent="UI/HUD/TowerShop/BuildOptions/TextureRect" groups=["build_options"]]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 24.0
+offset_right = 285.0
+offset_bottom = 126.0
+
+[node name="Cannon" type="TextureButton" parent="UI/HUD/TowerShop/BuildOptions/TextureRect" groups=["build_options"]]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 24.0
+offset_right = 423.0
+offset_bottom = 125.0
+
+[node name="Wizard" type="TextureButton" parent="UI/HUD/TowerShop/BuildOptions/TextureRect" groups=["build_options"]]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 25.0
+offset_right = 570.0
+offset_bottom = 126.0
+
+[node name="Currency" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 9.0
+offset_right = 450.0
+offset_bottom = 95.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.490196)
+theme_override_fonts/font = ExtResource("9")
+theme_override_font_sizes/font_size = 50
+text = "200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coin_icon" type="TextureRect" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 3.0
+offset_right = 521.0
+offset_bottom = 93.0
+texture = ExtResource("8")
+
+[node name="Health" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 5.0
+offset_right = 926.0
+offset_bottom = 91.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.490196)
+theme_override_fonts/font = ExtResource("9")
+theme_override_font_sizes/font_size = 50
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health_icon" type="TextureRect" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 1.0
+offset_right = 947.0
+offset_bottom = 91.0
+texture = ExtResource("10")
+
+[node name="WaveNumber" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 1035.0
+offset_right = 1358.0
+offset_bottom = 86.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9")
+theme_override_font_sizes/font_size = 50
+text = "Wave 1/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause" type="TextureButton" parent="UI/HUD"]
+process_mode = 3
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 112.0
+action_mode = 0
+texture_normal = ExtResource("11")
+texture_pressed = ExtResource("12")
+
+[node name="SpeedControl" type="TextureButton" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 957.0
+offset_right = 112.0
+offset_bottom = 1069.0
+action_mode = 0
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("13")
+
+[node name="Label" type="Label" parent="UI/HUD/SpeedControl"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 12.0
+offset_right = 161.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("9")
+theme_override_font_sizes/font_size = 50
+text = "1x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="UI/HUD/Pause" to="UI" method="_on_Pause_pressed"]
+[connection signal="pressed" from="UI/HUD/SpeedControl" to="UI" method="_on_Speed_pressed"]

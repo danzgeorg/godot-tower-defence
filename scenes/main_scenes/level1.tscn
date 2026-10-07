@@ -1,0 +1,121 @@
+[gd_scene load_steps=26 format=3 uid="uid://b1fqshrfxsard"]
+
+[ext_resource type="Texture2D" uid="uid://b34buynl06qxb" path="res://assets/environment/decorations/7.png" id="2_6qlr0"]
+[ext_resource type="Texture2D" uid="uid://b1wywti5mfgvb" path="res://assets/environment/decorations/11.png" id="3_6sxba"]
+[ext_resource type="Texture2D" uid="uid://blsbyd8i5d34i" path="res://assets/environment/nature/17.png" id="4_0ay28"]
+[ext_resource type="TileSet" uid="uid://b6pwuk6cpe3rq" path="res://assets/environment/paths/pathway_tileset.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://o3qebycrrtnq" path="res://assets/environment/decorations/12.png" id="5_bqu5p"]
+[ext_resource type="Texture2D" uid="uid://dp5kyssymelsj" path="res://assets/environment/decorations/13.png" id="6_srsit"]
+[ext_resource type="Texture2D" uid="uid://ds4shicroe857" path="res://assets/environment/nature/8.png" id="7_4hgvn"]
+[ext_resource type="Texture2D" uid="uid://ksceny00s64v" path="res://assets/environment/nature/9.png" id="8_htj0w"]
+[ext_resource type="Texture2D" uid="uid://bkhn84ff741br" path="res://assets/environment/nature/10.png" id="9_b8ha1"]
+[ext_resource type="Texture2D" uid="uid://bn0dukhbrhvj2" path="res://assets/environment/nature/14.png" id="10_khril"]
+[ext_resource type="Texture2D" uid="uid://bwknmnxb8cyvc" path="res://assets/environment/nature/15.png" id="11_sg7q6"]
+[ext_resource type="Texture2D" uid="uid://d2gcnrc4kmhcw" path="res://assets/environment/nature/16.png" id="12_p4m6y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wu8lo"]
+texture = ExtResource("2_6qlr0")
+texture_region_size = Vector2i(79, 67)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bv6x5"]
+texture = ExtResource("3_6sxba")
+texture_region_size = Vector2i(107, 100)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1wr2"]
+texture = ExtResource("4_0ay28")
+texture_region_size = Vector2i(33, 17)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nvfwq"]
+texture = ExtResource("5_bqu5p")
+texture_region_size = Vector2i(215, 148)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pwma"]
+texture = ExtResource("6_srsit")
+texture_region_size = Vector2i(77, 251)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61lsw"]
+texture = ExtResource("7_4hgvn")
+texture_region_size = Vector2i(105, 153)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svohl"]
+texture = ExtResource("8_htj0w")
+texture_region_size = Vector2i(71, 54)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7lhp"]
+texture = ExtResource("9_b8ha1")
+texture_region_size = Vector2i(95, 163)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ev570"]
+texture = ExtResource("10_khril")
+texture_region_size = Vector2i(95, 40)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvlaa"]
+texture = ExtResource("11_sg7q6")
+texture_region_size = Vector2i(36, 25)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42va2"]
+texture = ExtResource("12_p4m6y")
+texture_region_size = Vector2i(55, 27)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5jr8q"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(204, 104)
+sources/0 = SubResource("TileSetAtlasSource_wu8lo")
+sources/1 = SubResource("TileSetAtlasSource_bv6x5")
+sources/2 = SubResource("TileSetAtlasSource_nvfwq")
+sources/3 = SubResource("TileSetAtlasSource_8pwma")
+sources/4 = SubResource("TileSetAtlasSource_61lsw")
+sources/5 = SubResource("TileSetAtlasSource_svohl")
+sources/6 = SubResource("TileSetAtlasSource_i7lhp")
+sources/7 = SubResource("TileSetAtlasSource_ev570")
+sources/8 = SubResource("TileSetAtlasSource_uvlaa")
+sources/9 = SubResource("TileSetAtlasSource_42va2")
+sources/10 = SubResource("TileSetAtlasSource_i1wr2")
+
+[sub_resource type="Curve2D" id="1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1892, -37, 0, 0, 0, 0, 1429, 202, 0, 0, 0, 0, 1219, 106, 0, 0, 0, 0, 805, 310, 0, 0, 0, 0, 1010, 415, 0, 0, 0, 0, 619, 623, 0, 0, 0, 0, 507, 573, 0, 0, 0, 0, -81, 875)
+}
+point_count = 8
+
+[node name="Level1" type="Node2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+tile_set = ExtResource("5")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(0, 7, 65536, -1, 7, 65536, -65536, 7, 65536, 1, 7, 65536, 65536, 7, 65536, 458760, 7, 65536, 393224, 7, 65536, 327688, 7, 65536, 262152, 7, 65536, 196616, 1, 65536, 131080, 5, 196608, 65544, 5, 196608, 8, 5, 196608, -65528, 2, 65536, -65529, 0, 196608, 7, 7, 65536, -65530, 3, 65536, 6, 7, 65536, -65531, 7, 65536, 5, 7, 65536, -65532, 7, 65536, 4, 7, 65536, -65533, 7, 65536, 3, 7, 65536, -65534, 7, 65536, 2, 7, 65536, -65535, 7, 65536, 65537, 7, 65536, 131073, 7, 65536, 131074, 7, 65536, 65538, 7, 65536, 65539, 7, 65536, 131076, 7, 65536, 196611, 7, 65536, 262148, 7, 65536, 262147, 7, 65536, 131075, 7, 65536, 196610, 7, 65536, 393223, 0, 131072, 327687, 0, 131072, 262151, 0, 131072, 196615, 1, 131072, 131079, 7, 65536, 65543, 7, 65536, 65542, 7, 65536, 131078, 7, 65536, 65541, 7, 65536, 131077, 7, 65536, 65540, 7, 65536, 196612, 7, 65536, 327684, 7, 65536, 393222, 7, 65536, 327685, 7, 65536, 262149, 7, 65536, 262150, 7, 65536, 327686, 7, 65536, 196614, 7, 65536, 393221, 7, 65536, 196613, 7, 65536, 9, 7, 65536, 131081, 7, 65536, 262153, 7, 65536, 393225, 7, 65536, 524297, 7, 65536, -131071, 7, 65536, -131072, 7, 65536, -131070, 7, 65536, -196606, 7, 65536, -196605, 7, 65536, -262141, 7, 65536, -262140, 7, 65536, -262139, 7, 65536, -327675, 7, 65536, -327674, 1, 131072, -327673, 5, 131072, -393209, 7, 65536, -393208, 5, 196608, -458744, 5, 196608, -458743, 7, 65536, -524279, 7, 65536, -524280, 5, 196608, -589815, 7, 65536, -458745, 7, 65536, -393210, 7, 65536, -327676, 7, 65536, -393211, 7, 65536, -458747, 7, 65536, -458746, 7, 65536, -524281, 7, 65536, 458761, 7, 65536, 458762, 7, 65536, 458763, 7, 65536, 393227, 7, 65536, 393228, 7, 65536, 327693, 7, 65536, 327694, 7, 65536, 262158, 7, 65536, 262159, 7, 65536, 196624, 7, 65536, 131089, 7, 65536, 65554, 7, 65536, 65553, 7, 65536, 17, 7, 65536, 16, 7, 65536, -65520, 7, 65536, -131056, 7, 65536, -131057, 7, 65536, -196593, 7, 65536, -196594, 7, 65536, -262130, 7, 65536, -262131, 7, 65536, -327667, 7, 65536, -327668, 7, 65536, -393204, 7, 65536, -393205, 7, 65536, -458741, 7, 65536, -458742, 7, 65536, -524278, 7, 65536, 131082, 7, 65536, 65546, 7, 65536, 10, 7, 65536, -65526, 7, 65536, -131062, 7, 65536, -196598, 7, 65536, -262134, 7, 65536, -327670, 7, 65536, -393206, 7, 65536, -393207, 7, 65536, -327671, 7, 65536, -327672, 1, 65536, -262136, 7, 65536, -262137, 7, 65536, -262138, 0, 131072, -196602, 0, 131072, -196603, 7, 65536, -196604, 7, 65536, -131068, 7, 65536, -131069, 7, 65536, -131067, 7, 65536, -131066, 0, 131072, -131065, 7, 65536, -196601, 7, 65536, -196600, 7, 65536, -131064, 7, 65536, -131063, 7, 65536, -196599, 7, 65536, -262135, 7, 65536, -65527, 7, 65536, -327669, 7, 65536, -262133, 7, 65536, -196597, 7, 65536, -131061, 7, 65536, -65525, 7, 65536, 11, 7, 65536, 65547, 7, 65536, 131083, 7, 65536, 196619, 7, 65536, 196618, 7, 65536, 196617, 7, 65536, 262154, 7, 65536, 327690, 7, 65536, 327689, 7, 65536, 393226, 7, 65536, 327691, 7, 65536, 262155, 7, 65536, 262156, 7, 65536, 196620, 7, 65536, 131084, 7, 65536, 65548, 7, 65536, 12, 7, 65536, -65524, 7, 65536, -131060, 7, 65536, -196596, 7, 65536, -262132, 7, 65536, -196595, 7, 65536, -131059, 7, 65536, -65523, 7, 65536, 13, 7, 65536, 65549, 7, 65536, 131085, 7, 65536, 196621, 7, 65536, 262157, 7, 65536, 196622, 7, 65536, 131086, 7, 65536, 65550, 7, 65536, 14, 7, 65536, -65522, 7, 65536, -131058, 7, 65536, -65521, 7, 65536, 15, 7, 65536, 65551, 7, 65536, 131087, 7, 65536, 196623, 7, 65536, 131088, 7, 65536, 65552, 7, 65536, 327692, 7, 65536, 65545, 7, 65536, 458764, 7, 65536, 393229, 7, 65536, 524299, 7, 65536, 524298, 7, 65536, 589834, 7, 65536, 589833, 7, 65536, 655369, 7, 65536, 589832, 7, 65536, 524296, 7, 65536, 458759, 0, 131072, 524295, 0, 131072, 458758, 7, 65536, 131090, 7, 65536, 65555, 7, 65536, 196625, 7, 65536, 262160, 7, 65536, 18, 7, 65536, -65519, 7, 65536, 327695, 7, 65536, 393230, 7, 65536, 458765, 7, 65536, 524300, 7, 65536, 589835, 7, 65536, 655370, 7, 65536, 65535, 7, 65536, -589814, 7, 65536, -524277, 7, 65536, -458740, 7, 65536, -393203, 7, 65536, -327666, 7, 65536, -262129, 7, 65536, -196592, 7, 65536, -131055, 7, 65536, -65518, 7, 65536, 19, 7, 65536, -589816, 5, 196608)
+
+[node name="Decorations" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_5jr8q")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(327691, 4, 0, 14, 4, 0, -262133, 4, 0, 131083, 6, 0, -65526, 6, 0, 15, 5, 0, 10, 5, 0, 196620, 5, 0, 327692, 5, 0, 524295, 3, 0, -524279, 2, 0, 131075, 4, 0, -131070, 4, 0, 4, 6, 0, 196612, 5, 0, -65534, 5, 0, 65537, 0, 0, -196604, 0, 0, 65539, 0, 0, -196599, 0, 0, 458761, 0, 0, 65549, 0, 0, -131060, 7, 0, 196618, 7, 0, 458763, 7, 0, 262149, 7, 0, -327676, 7, 0, -65532, 7, 0, 262158, 10, 0, -131057, 10, 0, 12, 10, 0, 196611, 10, 0, 2, 10, 0, 131077, 10, 0)
+
+[node name="TowerExclusion" type="TileMap" parent="."]
+visible = false
+y_sort_enabled = true
+tile_set = ExtResource("5")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-589816, 5, 196608, -524280, 5, 196608, -458744, 5, 196608, -393208, 5, 196608, -262138, 5, 196608, -196602, 5, 196608, -131066, 5, 196608, 8, 5, 196608, 65544, 5, 196608, 131080, 5, 196608, 262151, 5, 196608, 327687, 5, 196608, 393223, 5, 196608, 458759, 5, 196608, 524295, 5, 196608, -327672, 6, 196608, -327674, 6, 65536, -65530, 3, 65536, -65528, 2, 65536, 196616, 6, 131072, 196615, 6, 65536)
+
+[node name="EnemyPath" type="Path2D" parent="."]
+curve = SubResource("1")
+
+[node name="Towers" type="Node2D" parent="."]
